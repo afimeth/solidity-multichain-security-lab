@@ -21,7 +21,7 @@ contract ReenterAdapter is IAdapter {
     Router public router; bool public rejected;
     constructor(Router r) { router = r; }
     function swap() external payable {
-        try router.route{value:1}(address(this),payable(address(0x123)),bytes32(uint256(99)),1,block.timestamp) { revert("reentry accepted"); } catch { rejected = true; }
+        try router.route{value:1}(address(this),payable(address(0x123)),bytes32(uint256(99)),1,block.timestamp) { revert("reentry accepted"); } catch (bytes memory reason) { require(bytes4(reason)==Router.Reentrant.selector,"wrong failure"); rejected = true; }
         (bool ok,) = msg.sender.call{value:msg.value}(""); require(ok);
     }
     receive() external payable {}
