@@ -1,0 +1,270 @@
+{
+  "schema": "interview-lab-evidence/v1",
+  "measured_at_utc": "2026-10-03T16:36:49.257586+00:00",
+  "commit_sha": "342e12caad6fc9bde2be05512ee0c99f831a3ae9",
+  "tracked_worktree_dirty": false,
+  "platform": "Windows",
+  "architecture": "AMD64",
+  "toolchain": {
+    "forge": "forge Version: 1.8.4\nCommit SHA: 50af4efe189dc64bad2b75ed6990b835de66c4ae\nBuild Timestamp: 2026-10-01T13:50:42.600348400Z (1790862642)\nBuild Profile: dist",
+    "solc": "0.8.28",
+    "profile": "default"
+  },
+  "summary": {
+    "reported_tests": 16,
+    "passed": 16,
+    "tests": [
+      {
+        "name": "invariant_Conservation()",
+        "status": "Success",
+        "kind": {
+          "Invariant": {
+            "runs": 128,
+            "calls": 4096,
+            "reverts": 0,
+            "workers": 1,
+            "metrics": {
+              "test/Router.t.sol:Handler.swap": {
+                "calls": 4096,
+                "reverts": 0,
+                "discards": 0
+              }
+            },
+            "failed_corpus_replays": 0,
+            "optimization_best_value": null
+          }
+        },
+        "invariant_predicates": [
+          {
+            "name": "invariant_Conservation",
+            "status": "Success"
+          },
+          {
+            "name": "invariant_NoRouterResidue",
+            "status": "Success"
+          }
+        ]
+      },
+      {
+        "name": "testAccessControl()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 32580
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testCallerDomainSeparation()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 11634
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testChainDomainSeparation()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 23127
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testDonationNotCountedAsOutput()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 135977
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testExpiredRoute()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 46929
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testFuzz_OutputAndConservation(uint96,uint16)",
+        "status": "Success",
+        "kind": {
+          "Fuzz": {
+            "first_case": {
+              "gas": 177015,
+              "stipend": 21392
+            },
+            "runs": 256,
+            "mean_gas": 155561,
+            "median_gas": 155575,
+            "failed_corpus_replays": 0
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testFuzz_SlippageAlwaysReverts(uint96)",
+        "status": "Success",
+        "kind": {
+          "Fuzz": {
+            "first_case": {
+              "gas": 166764,
+              "stipend": 21240
+            },
+            "runs": 256,
+            "mean_gas": 145532,
+            "median_gas": 145500,
+            "failed_corpus_replays": 0
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testReentrancyRejected()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 460734
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testRejectingRecipientRollsBack()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 233801
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testReplayRejected()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 162226
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testRouteMeasuresOutput()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 125465
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testSlippageRollsBackNonceAndBalances()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 296500
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testUnapprovedAdapter()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 72020
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testZeroMinimum()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 46591
+          }
+        },
+        "invariant_predicates": null
+      },
+      {
+        "name": "testZeroRecipient()",
+        "status": "Success",
+        "kind": {
+          "Unit": {
+            "gas": 44348
+          }
+        },
+        "invariant_predicates": null
+      }
+    ]
+  },
+  "checks": [
+    {
+      "command": [
+        "forge",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "e40b2af5f1374688147219796f61cb85b59a0f48d56d6c601a4f7ce7b0e9af1a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "command": [
+        "forge",
+        "test",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "27caecedd35ffd77999b129f5c7fdcfd8e5866f1ff120418f0523145b8ce1e42",
+      "stderr_sha256": "716fa8ec18a4be13bce6bf513ee2ca5f6177b17337ff3176b2ae378e4b34e101"
+    },
+    {
+      "command": [
+        "forge",
+        "snapshot",
+        "--snap",
+        "evidence/gas-snapshot.txt"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "082de89c71eb1441656b148211df8c189f834e6beec67605915277ea217a87aa",
+      "stderr_sha256": "5c0bd409e98f204f5fd76288b2f26cb089ceb9944ef8a004aedb2a72ba0c3f38"
+    },
+    {
+      "command": [
+        "forge",
+        "test",
+        "--gas-report"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "9b39d176e03e43f222fb3780f9fd050d94e8fe55e487bb2c942e42b986d937cf",
+      "stderr_sha256": "fd6ebf1d450f97370abe0aa396080446e5bfba114e2e5bbdf8969e022745e7aa"
+    },
+    {
+      "command": [
+        "forge",
+        "script",
+        "script/Deploy.s.sol:Deploy"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "8c7665ec079fc6ce49c615128b27a0aceb3b6cc8bc9ca5e4cceada42af0c418e",
+      "stderr_sha256": "6025546f5c6661bacad30d8259ed376f257ab8ffb070b846b1ec35c76881df76"
+    }
+  ],
+  "passed": true,
+  "safe_cv_claim": "Built a local Foundry routing-security lab with access-control, replay-domain, slippage and reentrancy tests, fuzz cases, conservation invariants, and gas measurements.",
+  "unsupported_claims": "Native-asset local fixture only: no ERC20 quirks, oracle, MEV mitigation, bridge messaging/finality/relayer verification, Yul/assembly, upgrade safety, mainnet/testnet operations, real multi-network deployment, or independent audit. Owner can allow a malicious adapter; user must trust the allowlist policy. Forced donations may remain stuck. Public receive accepts donations. Gas depends on compiler/profile and fixture. The two invariant predicates are grouped by Foundry 1.8.4 into one reported campaign.",
+  "ci_run_url": null
+}
