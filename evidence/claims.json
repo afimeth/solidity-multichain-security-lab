@@ -1,0 +1,9 @@
+{
+  "kind": "forge",
+  "IMPLEMENTED": "Solidity 0.8.28 native-asset router, immutable owner adapter allowlist, chain/address/caller/nonce request domain, balance-delta minimum output, deadline checks, checks/effects + reentrancy lock, local deployment guard, fuzz and handler invariants, gas snapshot.",
+  "MEASURED": "See exact-commit receipt, CI artifacts and baseline. Documentation does not substitute for a passing run.",
+  "DESIGNED": "Real bridge/router integration and security review by an independent reviewer remain open.",
+  "NOT_CLAIMED": "Native-asset local fixture only: no ERC20 quirks, oracle, MEV mitigation, bridge messaging/finality/relayer verification, Yul/assembly, upgrade safety, mainnet/testnet operations, real multi-network deployment, or independent audit. Owner can allow a malicious adapter; user must trust the allowlist policy. Forced donations may remain stuck. Public receive accepts donations. Gas depends on compiler/profile and fixture. The two invariant predicates are grouped by Foundry 1.8.4 into one reported campaign.",
+  "safe_cv_claim": "Built a local Foundry routing-security lab with access-control, replay-domain, slippage and reentrancy tests, fuzz cases, conservation invariants, and gas measurements.",
+  "authorship": "Fresh AI-assisted implementation using synthetic data and public role requirements; no private source used."
+}
